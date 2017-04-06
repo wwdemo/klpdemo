@@ -16,7 +16,7 @@ public class Example {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Response hello() {
-    return Response.ok("Hello World").build();
+    return Response.ok("Hello Kevin").build();
 
   }
 
