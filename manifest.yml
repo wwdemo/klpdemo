@@ -1,0 +1,9 @@
+applications:
+- name: klpdemo
+  path: ./target/klpdemo.zip
+  memory: 512M
+  timeout: 180
+  instances: 1
+  buildpack: liberty-for-java
+  host: klpdemomicroservice
+  domain: mybluemix.net

@@ -1,0 +1,20 @@
+container-name-run : "klpdemo"
+container-name-tools : "bx-dev-klpdemo-tools"
+image-name-run : "bx-dev-klpdemo"
+
+image-name-tools : "bx-dev-java-maven-tools"
+host-path-run : "target"
+build-cmd-run : "mvn install -Dmaven.repo.local=/project/.m2/repository && chmod -R 755 /project/target"
+test-cmd : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+build-cmd-debug : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+
+container-path-run : "/project"
+container-path-tools : "/project"
+
+container-port-map : "9080:9080,9443:9443"
+container-port-map-debug : "7777:7777"
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+
+debug-cmd : "server debug"
